@@ -106,155 +106,83 @@
     </div>
 
     <div class="contact-form">
-        <div class="field-list" id="contact-form-fields">
-            <fieldset class="form-item fields name-fieldset" id="name-fieldset">
-                <legend id="name-fieldset-legend">
-                    <div class="title">
-                        <div class="name-title-wrapper">
-                            <span class="field-names">Name</span>
-                            <span class="description required">(required)</span>
-                        </div>
-                    </div>
-                </legend>
-                <div class="looper">
-                    <div class="field first-name" data-dynamic-strings="">
-                        <label class="caption" for="first-name-field">
-                            <div class="caption-wrapper">
-                                <div class="caption-text">First Name</div>
+        <form id="contact-form" onsubmit="submitForm(event)">
+            <div class="field-list" id="contact-form-fields">
+                <fieldset class="form-item fields name-fieldset" id="name-fieldset">
+                    <legend id="name-fieldset-legend">
+                        <div class="title">
+                            <div class="name-title-wrapper">
+                                <span class="field-names">Name</span>
+                                <span class="description required">(required)</span>
                             </div>
-                        </label>
-                        <input aria-invalid="false" aria-required="true" autocomplete="given-name" class="input-text"
-                            id="first-name-field" name="fname" type="text" value="">
-                        <span class="form-input-effects" aria-hidden="true">
+                        </div>
+                    </legend>
+                    <div class="looper">
+                        <div class="field first-name" data-dynamic-strings="">
+                            <label class="caption" for="first-name-field">
+                                <div class="caption-wrapper">
+                                    <div class="caption-text">First Name</div>
+                                </div>
+                            </label>
+                            <input aria-invalid="false" aria-required="true" autocomplete="given-name" class="input-text"
+                                   id="first-name-field" name="fname" type="text" value="">
+                            <span class="form-input-effects" aria-hidden="true">
                             <span class="form-input-effects-border"></span>
                         </span>
-                    </div>
-                    <div class="field last-name" data-dynamic-strings="">
-                        <label class="caption" for="last-name-field">
-                            <div class="caption-wrapper">
-                                <div class="caption-text">Last Name</div>
-                            </div>
-                        </label>
-                        <input aria-invalid="false" aria-required="true" autocomplete="family-name" class="input-text"
-                            id="last-name-field" name="lname" type="text" value="">
-                        <span class="form-input-effects" aria-hidden="true">
+                        </div>
+                        <div class="field last-name" data-dynamic-strings="">
+                            <label class="caption" for="last-name-field">
+                                <div class="caption-wrapper">
+                                    <div class="caption-text">Last Name</div>
+                                </div>
+                            </label>
+                            <input aria-invalid="false" aria-required="true" autocomplete="family-name" class="input-text"
+                                   id="last-name-field" name="lname" type="text" value="">
+                            <span class="form-input-effects" aria-hidden="true">
                             <span class="form-input-effects-border"></span>
                         </span>
-                    </div>
-                </div>
-            </fieldset>
-            <div class="form-item field email-field required" id="email-field" data-dynamic-strings="">
-                <label for="email-field-input" class="title">
-                    <div class="title-wrapper">
-                        <div class="title-text">
-                            <span class="field-names">Email Address</span>
-                            <span class="description required">(required)</span>
                         </div>
                     </div>
-                </label>
-                <input aria-invalid="false" aria-required="true" autocomplete="false" class="input-text"
-                    id="email-field-input" placeholder="" type="email" value="">
-                <span class="form-input-effects" aria-hidden="true">
-                    <span class="form-input-effects-border"></span>
-                </span>
-            </div>
-            <div class="form-item field phone-field" id="phone-field" data-dynamic-strings="">
-                <label for="phone-field-input" class="title">
-                    <div class="title-wrapper">
-                        <div class="title-text">
-                            <span>Phone</span>
+                </fieldset>
+                <div class="form-item field email-field required" id="email-field" data-dynamic-strings="">
+                    <label for="email-field-input" class="title">
+                        <div class="title-wrapper">
+                            <div class="title-text">
+                                <span class="field-names">Email Address</span>
+                                <span class="description required">(required)</span>
+                            </div>
                         </div>
-                    </div>
-                </label>
-                <input id="phone-field-input" placeholder="" class="input-text" aria-invalid="false" type="text"
-                    value="" inputmode="numeric">
-                <span class="form-input-effects" aria-hidden="true">
-                    <span class="form-input-effects-border"></span>
-                </span>
-            </div>
-            <div class="form-item field company-field" id="company-field" data-dynamic-strings="">
-                <label for="company-field-input" class="title">
-                    <div class="title-wrapper">
-                        <div class="title-text">
-                            <span>Company</span>
-                        </div>
-                    </div>
-                </label>
-                <input aria-invalid="false" aria-required="false" autocomplete="false" class="input-text"
-                    id="company-field-input" placeholder="" type="text" value="">
-                <span class="form-input-effects" aria-hidden="true">
-                    <span class="form-input-effects-border"></span>
-                </span>
-            </div>
-            <div class="form-item field event-date-field" id="event-date-field" data-dynamic-strings="">
-                <label for="event-date-field-input" class="title">
-                    <div class="title-wrapper">
-                        <div class="title-text">
-                            <span>Event Date</span>
-                        </div>
-                    </div>
-                </label>
-                <div class="input-date-wrapper">
-                    <input aria-invalid="false" aria-required="false" autocomplete="false" class="input-text input-date"
-                        id="event-date-field-input" type="date" value="">
+                    </label>
+                    <input aria-invalid="false" aria-required="true" autocomplete="false" class="input-text"
+                           id="email-field-input" placeholder="" type="email" value="">
                     <span class="form-input-effects" aria-hidden="true">
-                        <span class="form-input-effects-border"></span>
-                    </span>
+                    <span class="form-input-effects-border"></span>
+                </span>
                 </div>
-            </div>
-
-            <div class="form-item field budget-field" id="budget-field" data-dynamic-strings="">
-                <label for="budget-field-input" class="title">
-                    <div class="title-wrapper">
-                        <div class="title-text">
-                            <span>Budget per Attendee</span>
+                <!-- Add other fields as necessary -->
+                <div class="field form-item message-field" id="message-field" data-dynamic-strings="">
+                    <label for="message-field-input" class="title">
+                        <div class="title-wrapper">
+                            <div class="title-text">
+                                <span>Tell us about your event!</span>
+                            </div>
                         </div>
-                    </div>
-                </label>
-                <input aria-invalid="false" aria-required="false" autocomplete="false" class="input-text"
-                    id="budget-field-input" placeholder="" type="text" value="">
-                <span class="form-input-effects" aria-hidden="true">
+                    </label>
+                    <textarea aria-invalid="false" aria-required="false" class="input-text"
+                              id="message-field-input"></textarea>
+                    <span class="form-input-effects" aria-hidden="true">
                     <span class="form-input-effects-border"></span>
                 </span>
-            </div>
-    
-            <div class="form-item field subject-field" id="subject-field" data-dynamic-strings="">
-                <label for="subject-field-input" class="title">
-                    <div class="title-wrapper">
-                        <div class="title-text">
-                            <span>Subject</span>
-                        </div>
-                    </div>
-                </label>
-                <input aria-invalid="false" aria-required="false" autocomplete="false" class="input-text"
-                    id="subject-field-input" placeholder="" type="text" value="">
-                <span class="form-input-effects" aria-hidden="true">
-                    <span class="form-input-effects-border"></span>
-                </span>
-            </div>
-
-            <div class="field form-item message-field" id="message-field" data-dynamic-strings="">
-                <label for="message-field-input" class="title">
-                    <div class="title-wrapper">
-                        <div class="title-text">
-                            <span>Tell us about your event!</span>
-                        </div>
-                    </div>
-                </label>
-                <textarea aria-invalid="false" aria-required="false" class="input-text"
-                    id="message-field-input"></textarea>
-                <span class="form-input-effects" aria-hidden="true">
-                    <span class="form-input-effects-border"></span>
-                </span>
-            </div>
-            <button class="submit-button" id="form-submit">
-                <div class="button-content">
-                    <div class="button-text-wrapper">
-                        <div class="button-text">Submit</div>
-                    </div>
                 </div>
-            </button>
-        </div>
+                <button type="submit" class="submit-button" id="form-submit">
+                    <div class="button-content">
+                        <div class="button-text-wrapper">
+                            <div class="button-text">Submit</div>
+                        </div>
+                    </div>
+                </button>
+            </div>
+        </form>
     </div>
 
 
